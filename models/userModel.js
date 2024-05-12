@@ -16,7 +16,7 @@ const userSchema = mongoose.Schema(
       require: [true, "password required"],
     },
     address: {
-      type: Array,
+      type: String,
     },
     phone: {
       type: String,
@@ -27,6 +27,10 @@ const userSchema = mongoose.Schema(
       require: [true, "use type is required "],
       default: "client",
       enum: ["client", "admin", "vendor", "driver"],
+    },
+    answer: {
+      type: String,
+      require: [true, "Answer is required"],
     },
     profile: {
       type: String,
